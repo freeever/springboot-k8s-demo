@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  spring-app:
+    image: 'k8s/springboot-k8s-demo:1.0.0'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: springboot-k8s-app
+    ports:
+      - 8080:8080
+
